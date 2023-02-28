@@ -112,3 +112,15 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+.win {
+  background-color: #008000;
+}
+
+.lose {
+  background-color: #ff0000;
+}
+
+.playing {
+  background-color: #222222;
+}

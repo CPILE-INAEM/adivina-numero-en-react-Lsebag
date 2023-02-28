@@ -5,11 +5,13 @@ import "./MostrarMensaje.css";
 //const { score } = props;
 //Esto es equivalente a escribir const score = props.score
 
-export default function MostrarMensaje({ number, secretNumber }) {
+export default function MostrarMensaje({ number, secretNumber, score }) {
   console.log("Renderizando MostrarMensaje");
   console.log(number, typeof number, secretNumber, typeof secretNumber);
   if (secretNumber === number) {
-    return <p className="message">¡Has acertado!</p>;
+    return <p className="message">¡Has ganado!</p>;
+  } else if (score === 0) {
+    return <p className="message">¡Has perdido!</p>;
   } else if (number === "") {
     return <p className="message">Empezamos a jugar...</p>;
   } else if (number > secretNumber) {
